@@ -30,6 +30,7 @@ class ResponsiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
+      debugPrint("large screen ${constraints.maxWidth}");
       if (constraints.maxWidth > constant.maxTabletWidth) {
         return largeScreen;
       } else if (constraints.maxWidth <= constant.maxTabletWidth &&

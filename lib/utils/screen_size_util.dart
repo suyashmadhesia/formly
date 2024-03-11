@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class ScreenSizeUtil {
   static final ScreenSizeUtil _instance = ScreenSizeUtil._internal();
   late BuildContext context;
-  static late double absHeight;
-  static late double absWidth;
+  static late double height;
+  static late double width;
   factory ScreenSizeUtil() {
     return _instance;
   }
@@ -13,15 +13,15 @@ class ScreenSizeUtil {
 
   void setContext(BuildContext context) {
     this.context = context;
+    getHeight();
+    getWidth();
   }
 
-  double getHeight() {
-    absHeight = MediaQuery.of(context).size.height;
-    return absHeight / 1000;
+  void getHeight() {
+    height = MediaQuery.of(context).size.height;
   }
 
-  double getWidth() {
-    absWidth = MediaQuery.of(context).size.width;
-    return absWidth / 100;
+  void getWidth() {
+    width = MediaQuery.of(context).size.width;
   }
 }

@@ -16,11 +16,10 @@ class FormlyApp extends StatelessWidget {
     final ScreenSizeUtil screenSizeUtil = ScreenSizeUtil();
     screenSizeUtil.setContext(context);
     return MaterialApp(
-      home: Scaffold(
-        body: DeferredWidgetBuilder(
-          future: create_form_screen.loadLibrary(),
-          child: create_form_screen.CreateFormScreen(),
-        ),
+      debugShowCheckedModeBanner: false,
+      home: DeferredWidgetBuilder(
+        future: create_form_screen.loadLibrary(),
+        child: create_form_screen.CreateFormScreen(),
       ),
     );
   }
