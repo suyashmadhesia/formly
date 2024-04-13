@@ -35,7 +35,7 @@ class _QuestionListWidgetState extends State<QuestionListWidget> {
                       height: ScreenSizeUtil.height * .05,
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Column(
                         children: [
                           ElevatedContainer(

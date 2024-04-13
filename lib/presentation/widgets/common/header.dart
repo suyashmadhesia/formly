@@ -18,5 +18,5 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size(double.infinity, ScreenSizeUtil.height * 0.08);
+  Size get preferredSize => Size(double.infinity, ScreenSizeUtil.height * 0.09);
 }

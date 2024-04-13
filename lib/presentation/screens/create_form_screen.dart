@@ -64,7 +64,9 @@ class _CreateFormScreenState extends State<CreateFormScreen> {
         body: ResponsiveLayout(
           largeScreen: ElevatedContainer(
             color: const Color(0xffF3F3F5),
-            padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+            padding: ResponsiveLayout.isDesktop(context)
+                ? const EdgeInsets.fromLTRB(16, 16, 16, 16)
+                : const EdgeInsets.all(8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,

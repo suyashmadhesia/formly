@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:formly/presentation/core/responsive_widget.dart';
 import 'package:formly/presentation/widgets/common/containers.dart';
 
 class FormQuestionPreview extends StatefulWidget {
@@ -11,9 +12,11 @@ class FormQuestionPreview extends StatefulWidget {
 class _FormQuestionPreviewState extends State<FormQuestionPreview> {
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
-      child: ElevatedContainer(
+    return Padding(
+      padding: ResponsiveLayout.isDesktop(context)
+          ? const EdgeInsets.fromLTRB(16, 16, 16, 16)
+          : const EdgeInsets.all(0),
+      child: const ElevatedContainer(
         width: double.infinity,
         color: Colors.white,
         child: SizedBox(),

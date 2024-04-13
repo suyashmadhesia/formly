@@ -9,7 +9,9 @@ class DeferredWidgetBuilder extends StatelessWidget {
     super.key,
     required this.future,
     required this.child,
-    this.loaderWidget = const CircularProgressIndicator(),
+    this.loaderWidget = const Center(
+      child: CircularProgressIndicator(),
+    ),
   });
 
   @override
